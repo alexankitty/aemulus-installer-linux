@@ -32,9 +32,9 @@ wine /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe /passive
 wine /tmp/vcredist_x86.exe /passive
 wine /tmp/vcredist_x64.exe /passive
 rm /tmp/vcredist_x86.exe /tmp/vcredist_x64.exe /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe
-curl -Lso /tmp/AemulusPackageManager.7z 
+curl -Lso /tmp/AemulusPackageManager.7z $aemulus 
 7z x /tmp/AemulusPackageManager.7z -o"${WINEPREFIX}/drive_c/"
-rm /tmp/AemulusPackageManager.7z $aemulus
+rm /tmp/AemulusPackageManager.7z
 mv "${WINEPREFIX}/drive_c/AemulusPackageManagerv${version}" "${WINEPREFIX}/drive_c/AemulusPackageManager"
 
 #Setup desktop icon
