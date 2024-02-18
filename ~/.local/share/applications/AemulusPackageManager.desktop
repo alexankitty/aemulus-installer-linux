@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Aemulus Package Manager
-Type=Application
-StartupNotify=true
-Icon=AemulusPackageManager
-MimeType=x-scheme-handler/Aemulus
-Exec=env WINEPREFIX=/home/alexandra/.aemulus wine C:\\\\AemulusPackageManager\\\\AemulusPackageManager.exe %u
-Path=/home/alexandra/.aemulus/drive_c/AemulusPackageManager
-X-Desktop-File-Install-Version=0.27
