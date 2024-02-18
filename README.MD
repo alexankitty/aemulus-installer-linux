@@ -1,4 +1,4 @@
-# Aemulus Script Installer for Windows
+# Aemulus Script Installer for Linuz
 ## Dependencies
 ```
 curl
