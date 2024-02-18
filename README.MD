@@ -1,5 +1,7 @@
 # Aemulus Script Installer for Linux
 ## Dependencies
+
+### Arch and Steam Deck
 ```
 curl
 wine
@@ -23,6 +25,36 @@ If wine is "missing" from the repositories, open /etc/pacman.conf in your favori
 Once done on steamdeck, re-enable immutable fs.
 ```
 sudo steamos-readonly enable
+```
+
+### Debian and similar
+```
+curl
+wine
+winetricks
+p7zip
+unzip
+desktop-file-utils
+gnutls
+```
+
+Install
+```
+sudo apt install curl wine winetricks p7zip unzip desktop-file-utils gnutls
+```
+
+### Fedora
+```
+curl
+wine
+winetricks
+p7zip
+unzip
+desktop-file-utils
+```
+Install
+```
+sudo dnf install curl wine winetricks p7zip unzip desktop-file-utils
 ```
 
 Make sure you have these installed before trying to run the script otherwise you will run into issues.
