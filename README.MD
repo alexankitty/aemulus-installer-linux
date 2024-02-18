@@ -8,6 +8,21 @@ p7zip
 unzip
 desktop-file-utils
 ```
+If you're on steamdeck you need to disable immutable fs temporarily!
+```
+sudo steamos-readonly disable
+```
+Install your dependencies with the following
+```
+sudo pacman -S curl wine winetricks p7zip unzip desktop-file-utils
+```
+If wine is "missing" from the repositories, open /etc/pacman.conf in your favorite editor and uncomment the two multilib (not multililb testing lines!) close to the endo f the file.  
+
+Once done on steamdeck, re-enable immutable fs.
+```
+sudo steamos-readonly enable
+```
+
 Make sure you have these installed before trying to run the script otherwise you will run into issues.
 
 ## Installation
