@@ -1,4 +1,5 @@
 # Aemulus Script Installer for Linux
+This is also covered in [Persona 3 FES Modding Guide: Installing Aemulus on Linux](https://persona-3-fes-modding-guide.readthedocs.io/en/latest/linuxaemulussetup.html).
 ## Dependencies
 
 ### Arch and Steam Deck
@@ -51,10 +52,12 @@ winetricks
 p7zip
 unzip
 desktop-file-utils
+gnutls
+gnutls.i686
 ```
 Install
 ```
-sudo dnf install curl wine winetricks p7zip unzip desktop-file-utils
+sudo dnf install curl wine winetricks p7zip unzip desktop-file-utils gnutls gnutls.i686
 ```
 
 Make sure you have these installed before trying to run the script otherwise you will run into issues.
@@ -76,5 +79,5 @@ Put in an issue in the repo with the output of the script and as much informatio
 If for some reason the URLs become out of date that the script uses for grabbing everything, you can change the download path variables under `#Download Paths`
 
 ## Uninstalling
-`rm -rf ~/.aemulus`
+`rm -rf ~/.local/share/aemulus`
 
