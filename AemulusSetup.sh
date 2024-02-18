@@ -1,6 +1,6 @@
 #!/bin/sh
 #Environment
-export WINEPREFIX=$HOME/.aemulus
+export WINEPREFIX=$HOME/.local/share/.aemulus
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 ICON_PATH=~/.local/share/icons/hicolor/256x256/apps/
 EXEC_LINE="Exec=env WINEPREFIX=$WINEPREFIX "
