@@ -33,6 +33,7 @@ cd aemulus-installer-linux
 chmod +x ./AemulusSetup.sh
 ./AemulusSetup.sh
 ```
+If wine mono pops up, you can either click install or cancel. It doesn't matter, the script will ensure it's removed later.
 
 ## Issues
 Put in an issue in the repo with the output of the script and as much information as possible.
