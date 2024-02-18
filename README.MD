@@ -7,6 +7,8 @@ winetricks
 p7zip
 unzip
 desktop-file-utils
+lib32-gnutls
+lib32-gst-plugins-base
 ```
 If you're on steamdeck you need to disable immutable fs temporarily!
 ```
@@ -14,7 +16,7 @@ sudo steamos-readonly disable
 ```
 Install your dependencies with the following
 ```
-sudo pacman -S curl wine winetricks p7zip unzip desktop-file-utils
+sudo pacman -S curl wine winetricks p7zip unzip desktop-file-utils lib32-gnutls lib32-gst-plugins-base
 ```
 If wine is "missing" from the repositories, open /etc/pacman.conf in your favorite editor and uncomment the two multilib (not multililb testing lines!) close to the endo f the file.  
 
