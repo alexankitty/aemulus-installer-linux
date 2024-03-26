@@ -17,6 +17,7 @@ version=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/TekkaGB/A
 version=${version##*/}
 aemulus="https://github.com/TekkaGB/AemulusModManager/releases/latest/download/AemulusPackageManagerv${version}.7z"
 dotnet8="https://download.visualstudio.microsoft.com/download/pr/84ba33d4-4407-4572-9bfa-414d26e7c67c/bb81f8c9e6c9ee1ca547396f6e71b65f/windowsdesktop-runtime-8.0.2-win-x64.exe"
+dotnet7="https://download.visualstudio.microsoft.com/download/pr/c81fc3af-c371-4bb5-a59d-fa3e852799c7/056ac9df87d92b75cc463cb106ef3b64/windowsdesktop-runtime-7.0.17-win-x64.exe"
 
 #setup Prefix
 mkdir $WINEPREFIX
@@ -24,15 +25,17 @@ wineboot -u
 #cd ${WINEPREFIX}/drive_c/windows/Fonts && for i in /usr/share/fonts/**/*.{ttf,otf}; do ln -s "$i"; done
 cd $SCRIPT_DIR
 curl -o /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe $dotnet8
+curl -o /tmp/windowsdesktop-runtime-7.0.17-win-x64.exe $dotnet7
 curl -o /tmp/vcredist_x86.exe $vcx86
 curl -o /tmp/vcredist_x64.exe $vcx64
 winetricks remove_mono
 winetricks -q dotnet48
 winetricks -q dotnet35
 wine /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe /passive
+wine /tmp/windowsdesktop-runtime-7.0.17-win-x64.exe /passive
 wine /tmp/vcredist_x86.exe /passive
 wine /tmp/vcredist_x64.exe /passive
-rm /tmp/vcredist_x86.exe /tmp/vcredist_x64.exe /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe
+rm /tmp/vcredist_x86.exe /tmp/vcredist_x64.exe /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe /tmp/windowsdesktop-runtime-7.0.17-win-x64.exe 
 curl -Lso /tmp/AemulusPackageManager.7z $aemulus 
 7z x /tmp/AemulusPackageManager.7z -o"${WINEPREFIX}/drive_c/"
 rm /tmp/AemulusPackageManager.7z
