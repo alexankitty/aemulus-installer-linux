@@ -65,13 +65,23 @@ Make sure you have these installed before trying to run the script otherwise you
 
 ## Installation
 Make sure you have git installed if you want it super easy!  
-```sh
+```bash
 git clone https://github.com/alexankitty/aemulus-installer-linux
 cd aemulus-installer-linux
 chmod +x ./AemulusSetup.sh
 ./AemulusSetup.sh
 ```
 If wine mono pops up, you can either click install or cancel. It doesn't matter, the script will ensure it's removed later.
+
+## Game specific instructions
+# Persona 5 Royal (Switch)
+For some unknown reason, Aemulus tries to pass a null file reference to the lib responsible for unpacking the CPKs for this game. 
+You will need to unpack them by hand by downloading and extracting [CriFsV2Lib](https://github.com/Sewer56/CriFsV2Lib), and then running it under your wine Aemulus prefix with the following command:
+```bash
+cd ~/Path/To/CriFsLib.GUI
+WINEPREFIX=~/.local/share/aemulus wine CriFsLib.GUI.exe
+```
+Followed by copying the extracted results to `~/.local/share/aemulus/drive_c/AemulusPackageManager/Original/Persona 5 Royal (Switch)`
 
 ## Issues
 Put in an issue in the repo with the output of the script and as much information as possible.
