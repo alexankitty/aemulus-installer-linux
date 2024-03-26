@@ -1,5 +1,6 @@
 # Aemulus Script Installer for Linux
-This is also covered in [Persona 3 FES Modding Guide: Installing Aemulus on Linux](https://persona-3-fes-modding-guide.readthedocs.io/en/latest/linuxaemulussetup.html).
+This is also covered in [Persona 3 FES Modding Guide: Installing Aemulus on Linux](https://persona-3-fes-modding-guide.readthedocs.io/en/latest/linuxaemulussetup.html).  
+Important note: WINE does not run under Version 6 or earlier. Current stable is 9.0, LTS distros ship 8.0 still. Please make sure you're running WINE ≥ 8.0 !
 ## Dependencies
 
 ### Arch and Steam Deck
