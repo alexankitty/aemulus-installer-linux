@@ -74,7 +74,7 @@ chmod +x ./AemulusSetup.sh
 If wine mono pops up, you can either click install or cancel. It doesn't matter, the script will ensure it's removed later.
 
 ## Game specific instructions
-# Persona 5 Royal (Switch)
+### Persona 5 Royal (Switch)
 For some unknown reason, Aemulus tries to pass a null file reference to the lib responsible for unpacking the CPKs for this game. 
 You will need to unpack them by hand by downloading and extracting [CriFsV2Lib](https://github.com/Sewer56/CriFsV2Lib), and then running it under your wine Aemulus prefix with the following command:
 ```bash
