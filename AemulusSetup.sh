@@ -21,9 +21,9 @@ aemulus="https://github.com/TekkaGB/AemulusModManager/releases/latest/download/A
 dotnet8="https://download.visualstudio.microsoft.com/download/pr/84ba33d4-4407-4572-9bfa-414d26e7c67c/bb81f8c9e6c9ee1ca547396f6e71b65f/windowsdesktop-runtime-8.0.2-win-x64.exe"
 dotnet7="https://download.visualstudio.microsoft.com/download/pr/c81fc3af-c371-4bb5-a59d-fa3e852799c7/056ac9df87d92b75cc463cb106ef3b64/windowsdesktop-runtime-7.0.17-win-x64.exe"
 
-if [[ $wine_ver < 9.00 ]]
+if [[ $wine_ver < 8.20 ]]
 then
-    echo "Wine version is unsupported, please upgrade to wine version 9 or later. You may need to install wine-staging package."
+    echo "Wine version is unsupported, please upgrade to wine version 8.26 or later. You may need to install wine-staging package."
     exit
 fi
 
@@ -40,6 +40,7 @@ if [[ $wine_ver < 9.0 ]]
 then
     winetricks -q dotnet48
     winetricks -q dotnet35
+    winetricks -q win10c
 fi
 wine /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe /passive
 wine /tmp/windowsdesktop-runtime-7.0.17-win-x64.exe /passive
