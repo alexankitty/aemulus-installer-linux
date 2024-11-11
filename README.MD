@@ -3,7 +3,10 @@ This is also covered in [Persona 3 FES Modding Guide: Installing Aemulus on Linu
 Important note: Aemulus does not run under WINE version 6 or earlier. Current stable is 9.0, LTS distros ship 8.0 still. Please make sure you're running WINE ≥ 8.0 !
 ## Dependencies
 
-### Arch and Steam Deck
+### Steam Deck and Immutable Distros
+Use the immutable script instead.
+
+### Arch
 ```
 curl
 wine
@@ -13,10 +16,6 @@ unzip
 desktop-file-utils
 lib32-gnutls
 lib32-gst-plugins-base
-```
-If you're on steamdeck you need to disable immutable fs temporarily!
-```
-sudo steamos-readonly disable
 ```
 Install your dependencies with the following
 ```
@@ -62,6 +61,11 @@ sudo dnf install curl wine winetricks p7zip unzip desktop-file-utils gnutls gnut
 ```
 
 Make sure you have these installed before trying to run the script otherwise you will run into issues.
+
+## Immutable Installation
+Clone the repo or click code then Download zip.  
+Run `./AemulusSetupImmutable.sh` in your terminal.  
+Once completed, open your desktop's launcher and start Aemulus.
 
 ## Installation
 Make sure you have git installed if you want it super easy!  
