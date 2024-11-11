@@ -4,6 +4,6 @@ Type=Application
 StartupNotify=true
 Icon=AemulusPackageManager
 MimeType=x-scheme-handler/aemulus
-Exec=env WINEPREFIX=/home/alexandra/.local/share/aemulus DOTNET_ROOT= /home/alexandra/.local/share/wine.AppImage wine C:\\\\AemulusPackageManager\\\\AemulusPackageManager.exe %u
+Exec=env WINEPREFIX=/home/alexandra/.local/share/aemulus DOTNET_ROOT="" wine C:\\\\AemulusPackageManager\\\\AemulusPackageManager.exe %u
 Path=/home/alexandra/.local/share/aemulus/drive_c/AemulusPackageManager
 Categories=Game
