@@ -37,7 +37,7 @@ curl -o /tmp/windowsdesktop-runtime-7.0.17-win-x64.exe $dotnet7
 curl -o /tmp/vcredist_x86.exe $vcx86
 curl -o /tmp/vcredist_x64.exe $vcx64
 winetricks remove_mono
-if [[ $wine_ver < 9.10 ]]
+if [[ $wine_ver < 9.0 ]]
 then
     winetricks -q dotnet48
     winetricks -q dotnet35
