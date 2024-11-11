@@ -24,6 +24,7 @@ dotnet7="https://download.visualstudio.microsoft.com/download/pr/c81fc3af-c371-4
 if [[ $wine_ver < 9.00 ]]
 then
     echo "Wine version is unsupported, please upgrade to wine version 9 or later. You may need to install wine-staging package."
+    exit
 fi
 
 #setup Prefix
