@@ -24,11 +24,6 @@ sudo pacman -S curl wine winetricks p7zip unzip desktop-file-utils lib32-gnutls 
 ```
 If wine is "missing" from the repositories, open /etc/pacman.conf in your favorite editor and uncomment the two multilib (not multililb testing lines!) close to the endo f the file.  
 
-Once done on steamdeck, re-enable immutable fs.
-```
-sudo steamos-readonly enable
-```
-
 ### Debian and similar
 ```
 curl
