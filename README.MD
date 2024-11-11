@@ -4,7 +4,8 @@ Important note: Aemulus does not run under WINE version 6 or earlier. Current st
 ## Dependencies
 
 ### Steam Deck and Immutable Distros
-Use the immutable script instead.
+Use the immutable script instead.  
+Make sure AppImageLauncher is not installed.
 
 ### Arch
 ```
