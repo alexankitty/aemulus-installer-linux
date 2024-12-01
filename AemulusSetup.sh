@@ -40,7 +40,7 @@ if [[ $wine_ver < 9.0 ]]
 then
     winetricks -q dotnet48
     winetricks -q dotnet35
-    winetricks -q win10c
+    winetricks -q win10
 fi
 wine /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe /passive
 wine /tmp/windowsdesktop-runtime-7.0.17-win-x64.exe /passive
