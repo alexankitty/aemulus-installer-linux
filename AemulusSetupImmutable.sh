@@ -28,7 +28,8 @@ if [ ! -f $HOME/.local/share/wine.AppImage ]; then
     chmod +x $HOME/.local/share/wine.AppImage
 fi
 wine_ver=$(wine --version)
-wine_ver=${wine_ver#*-}
+wine_ver=$(echo ${wine_ver#*-} | awk '{print $1;}')
+wine_ver=$(echo ${wine_ver%.*})
 #setup Prefix
 wineboot
 cd $SCRIPT_DIR
@@ -36,7 +37,7 @@ curl -o /tmp/windowsdesktop-runtime-8.0.2-win-x64.exe $dotnet8
 curl -o /tmp/windowsdesktop-runtime-7.0.17-win-x64.exe $dotnet7
 curl -o /tmp/vcredist_x86.exe $vcx86
 curl -o /tmp/vcredist_x64.exe $vcx64
-if [[ $wine_ver < 9.0 ]]
+if [[ $wine_ver -lt 9 ]]
 then
     winetricks -q dotnet48
     winetricks -q dotnet35
