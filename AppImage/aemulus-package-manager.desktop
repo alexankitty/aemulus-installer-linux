@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Aemulus Package Manager
+Type=Application
+StartupNotify=true
+Icon=aemulus-package-manager
+MimeType=x-scheme-handler/aemulus
+Exec=Launch-Aemulus %u
+Path=$HOME/.local/share/AemulusPackageManager
+Categories=Game;
+StartupWMClass=AemulusPackageManager

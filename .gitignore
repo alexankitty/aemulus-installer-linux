@@ -1,0 +1,5 @@
+AppImage/AppDir/*
+dist/*
+AppImage/dist/*
+quick-sharun
+appimagetool
